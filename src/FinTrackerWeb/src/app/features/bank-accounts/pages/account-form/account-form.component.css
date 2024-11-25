@@ -1,0 +1,56 @@
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-card {
+    padding: 20px;
+}
+
+mat-card-header {
+    margin-bottom: 20px;
+}
+
+mat-card-title {
+    font-size: 24px !important;
+    margin-bottom: 0 !important;
+}
+
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+/* Dark theme adjustments */
+:host-context(.dark-theme) {
+    .form-card {
+        background-color: #424242;
+    }
+
+    mat-label {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-card {
+        padding: 16px;
+    }
+}

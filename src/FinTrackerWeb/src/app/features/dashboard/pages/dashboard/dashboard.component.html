@@ -1,0 +1,22 @@
+<div class="dashboard-container" *ngIf="dashboardData$ | async as data">
+    <div class="summary-section">
+        <app-summary-cards [totalBalance]="data.totalBalance" [monthlyIncome]="data.monthlyIncome"
+            [monthlyExpense]="data.monthlyExpense">
+        </app-summary-cards>
+    </div>
+
+    <div class="main-content">
+        <div class="chart-section">
+            <app-expense-chart [expenseData]="data.expenseByCategory">
+            </app-expense-chart>
+
+            <app-account-balance [accounts]="data.accounts">
+            </app-account-balance>
+        </div>
+
+        <div class="transactions-section">
+            <app-recent-transactions [transactions]="data.recentTransactions">
+            </app-recent-transactions>
+        </div>
+    </div>
+</div>

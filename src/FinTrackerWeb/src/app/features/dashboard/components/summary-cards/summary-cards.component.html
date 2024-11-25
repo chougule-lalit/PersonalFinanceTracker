@@ -1,0 +1,28 @@
+<div class="summary-cards">
+    <mat-card>
+        <mat-card-content>
+            <div class="card-content">
+                <div class="amount">{{totalBalance | currency}}</div>
+                <div class="label">Total Balance</div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="income-card">
+        <mat-card-content>
+            <div class="card-content">
+                <div class="amount">{{monthlyIncome | currency}}</div>
+                <div class="label">Monthly Income</div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card class="expense-card">
+        <mat-card-content>
+            <div class="card-content">
+                <div class="amount">{{monthlyExpense | currency}}</div>
+                <div class="label">Monthly Expenses</div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

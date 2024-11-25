@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <button mat-icon-button (click)="toggleSidenav.emit()">
+        <mat-icon>{{ isSidenavOpen ? 'menu_open' : 'menu' }}</mat-icon>
+    </button>
+
+    <div class="brand">
+        <mat-icon class="brand-icon">account_balance</mat-icon>
+        <span class="brand-name">Fin<span class="brand-highlight">Tracker</span></span>
+    </div>
+
+    <span class="toolbar-spacer"></span>
+
+    <button mat-icon-button (click)="toggleTheme.emit()" class="theme-toggle">
+        <mat-icon>{{ isDarkTheme ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-button">
+        <mat-icon>account_circle</mat-icon>
+        <span>{{ userName$ | async }}</span>
+        <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="logout.emit()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

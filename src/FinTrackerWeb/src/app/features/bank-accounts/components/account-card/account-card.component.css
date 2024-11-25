@@ -1,0 +1,30 @@
+.account-card {
+    margin: 16px;
+    border-radius: 8px;
+  }
+  
+  .balance {
+    font-size: 24px;
+    font-weight: 500;
+    color: #4CAF50;
+    margin: 16px 0;
+  }
+  
+  .account-details {
+    margin-top: 16px;
+  }
+  
+  .account-details p {
+    margin: 8px 0;
+    color: var(--text-secondary);
+  }
+  
+  .account-details strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+  
+  mat-card-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }

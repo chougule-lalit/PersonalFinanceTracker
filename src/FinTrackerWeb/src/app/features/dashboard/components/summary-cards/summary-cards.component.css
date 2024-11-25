@@ -1,0 +1,33 @@
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.income-card .amount {
+    color: #4caf50;
+}
+
+.expense-card .amount {
+    color: #f44336;
+}
+
+:host-context(.dark-theme) {
+    .label {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}

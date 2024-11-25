@@ -1,0 +1,17 @@
+<div class="layout-container" [class.dark-theme]="isDarkTheme">
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav [mode]="'side'" [opened]="isSidenavOpen" class="sidenav">
+            <app-sidebar></app-sidebar>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <app-header [isSidenavOpen]="isSidenavOpen" (toggleSidenav)="toggleSidenav()" [isDarkTheme]="isDarkTheme"
+                (toggleTheme)="toggleTheme()" (logout)="onLogout()">
+            </app-header>
+
+            <main class="main-content">
+                <router-outlet></router-outlet>
+            </main>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

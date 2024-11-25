@@ -1,0 +1,27 @@
+.account-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.account-info {
+    .name {
+        font-weight: 500;
+    }
+
+    .bank {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.balance {
+    font-weight: 500;
+}
+
+:host-context(.dark-theme) {
+    .bank {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}

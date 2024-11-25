@@ -1,0 +1,27 @@
+<div class="accounts-container">
+    <div class="header">
+        <h1>Bank Accounts</h1>
+        <button mat-raised-button color="primary" routerLink="new">
+            <mat-icon>add</mat-icon>
+            Add Account
+        </button>
+    </div>
+
+    <ng-container *ngIf="(accounts$ | async) as accounts">
+        <div *ngIf="accounts.length > 0; else noAccounts" class="accounts-grid">
+            <app-account-card *ngFor="let account of accounts" [account]="account" (edit)="onEditAccount($event)"
+                (delete)="onDeleteAccount($event)">
+            </app-account-card>
+        </div>
+    </ng-container>
+
+    <ng-template #noAccounts>
+        <mat-card class="empty-state">
+            <mat-card-content>
+                <mat-icon class="empty-icon">account_balance</mat-icon>
+                <h2>No Bank Accounts</h2>
+                <p>You haven't added any bank accounts yet. Click the button above to add your first account.</p>
+            </mat-card-content>
+        </mat-card>
+    </ng-template>
+</div>

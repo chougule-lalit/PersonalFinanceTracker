@@ -1,0 +1,84 @@
+:root {
+  --primary: #3f51b5;
+  --accent: #ff4081;
+  --warn: #f44336;
+  --background: #f5f5f5;
+  --card-background: #ffffff;
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --surface: #ffffff;
+}
+
+.dark-theme {
+  --primary: #00BFA5;
+  --accent: #ff4081;
+  --warn: #f44336;
+  --background: #0A1929;
+  --card-background: #132F4C;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --surface: #132F4C;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* Card Styles */
+.mat-mdc-card {
+  background-color: var(--card-background) !important;
+  color: var(--text-primary) !important;
+}
+
+.mat-mdc-card-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* Form Field Styles */
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.dark-theme .mat-mdc-form-field-appearance-outline .mat-mdc-form-field-outline {
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-theme .mat-mdc-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: var(--primary);
+}
+
+.dark-theme .mat-mdc-form-field-label {
+  color: var(--text-secondary);
+}
+
+.dark-theme .mat-mdc-input-element {
+  color: var(--text-primary);
+}
+
+/* Button Styles */
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Dialog Styles */
+.mat-mdc-dialog-container {
+  background-color: var(--card-background);
+  color: var(--text-primary);
+}
+
+/* Table Styles */
+.mat-mdc-table {
+  background-color: var(--card-background);
+}
+
+.mat-mdc-header-cell {
+  color: var(--text-secondary);
+}
+
+.mat-mdc-cell {
+  color: var(--text-primary);
+}

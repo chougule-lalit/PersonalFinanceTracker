@@ -1,0 +1,35 @@
+.category-card {
+    margin: 16px;
+    border-radius: 8px;
+}
+
+.category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.category-icon.income {
+    background-color: #4CAF50;
+}
+
+.category-icon.expense {
+    background-color: #f44336;
+}
+
+.category-icon mat-icon {
+    color: white;
+}
+
+.description {
+    color: var(--text-secondary);
+    margin: 16px 0;
+}
+
+mat-card-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+}

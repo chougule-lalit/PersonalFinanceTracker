@@ -1,0 +1,56 @@
+.header-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.brand-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.brand-highlight {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.theme-toggle {
+    margin-right: 8px;
+}
+
+.user-menu-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 8px;
+}
+
+.user-menu-button mat-icon {
+    margin-right: 4px;
+}
+
+/* Dark theme specific styles */
+:host-context(.dark-theme) {
+    .header-toolbar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}

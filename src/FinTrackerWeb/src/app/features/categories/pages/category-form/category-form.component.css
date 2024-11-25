@@ -1,0 +1,30 @@
+/* src/app/features/categories/pages/category-form/category-form.component.css (Replace entire file) */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.category-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+mat-card-title {
+    margin-bottom: 20px !important;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 16px;
+    }
+}

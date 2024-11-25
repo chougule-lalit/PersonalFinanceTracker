@@ -1,0 +1,49 @@
+.transactions-container {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.filter-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.transaction-table {
+    width: 100%;
+}
+
+.mat-column-amount {
+    text-align: right;
+}
+
+.income {
+    color: #4caf50;
+}
+
+.expense {
+    color: #f44336;
+}
+
+.mat-column-actions {
+    width: 100px;
+    text-align: center;
+}
+
+.mat-mdc-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.dark-theme .mat-mdc-row:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}

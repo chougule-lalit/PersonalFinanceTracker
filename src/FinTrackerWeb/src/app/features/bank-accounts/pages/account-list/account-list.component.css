@@ -1,0 +1,64 @@
+/* src/app/features/bank-accounts/pages/account-list/account-list.component.css */
+.accounts-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 600px) {
+    .accounts-container {
+        padding: 16px;
+    }
+
+    .accounts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.empty-state h2 {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.empty-state p {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Dark theme adjustments */
+:host-context(.dark-theme) {
+    .empty-icon {
+        color: rgba(255, 255, 255, 0.38);
+    }
+
+    .empty-state p {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}

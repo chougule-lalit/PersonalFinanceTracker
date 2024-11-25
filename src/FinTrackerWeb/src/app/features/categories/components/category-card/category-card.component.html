@@ -1,0 +1,24 @@
+<mat-card class="category-card">
+    <mat-card-header>
+        <div mat-card-avatar
+            [ngClass]="{'income': category.type === TransactionType.Income, 'expense': category.type === TransactionType.Expense}"
+            class="category-icon">
+            <mat-icon>{{category.type === TransactionType.Income ? 'arrow_upward' : 'arrow_downward'}}</mat-icon>
+        </div>
+        <mat-card-title>{{category.name}}</mat-card-title>
+        <mat-card-subtitle>{{TransactionType[category.type]}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content *ngIf="category.description">
+        <p class="description">{{category.description}}</p>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button mat-button color="primary" (click)="onEdit()" [disabled]="category.isDefault">
+            <mat-icon>edit</mat-icon> Edit
+        </button>
+        <button mat-button color="warn" (click)="onDelete()" [disabled]="category.isDefault">
+            <mat-icon>delete</mat-icon> Delete
+        </button>
+    </mat-card-actions>
+</mat-card>

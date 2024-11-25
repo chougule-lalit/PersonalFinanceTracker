@@ -1,0 +1,100 @@
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    margin: auto;
+}
+
+mat-card {
+    max-width: 450px;
+    margin: auto;
+    padding: 30px;
+}
+
+.auth-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.name-fields {
+    display: flex;
+    gap: 16px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button[type="submit"] {
+    height: 45px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 599px) {
+    mat-card {
+        padding: 20px;
+    }
+
+    .name-fields {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 600px) and (max-width: 959px) {
+    mat-card {
+        max-width: 500px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 960px) {
+    mat-card {
+        max-width: 550px;
+    }
+}
+
+/* Extra Large screens */
+@media (min-width: 1920px) {
+    mat-card {
+        max-width: 600px;
+    }
+}
+
+:host ::ng-deep {
+    .mat-mdc-form-field-subscript-wrapper {
+        height: 0;
+    }
+
+    .mat-mdc-card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1) !important;
+    }
+
+    .mat-mdc-form-field {
+        line-height: 1.5;
+    }
+}

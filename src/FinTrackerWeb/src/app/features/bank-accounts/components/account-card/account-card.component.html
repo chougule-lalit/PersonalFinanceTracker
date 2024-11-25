@@ -1,0 +1,26 @@
+<mat-card class="account-card">
+    <mat-card-header>
+        <mat-card-title>{{account.accountName}}</mat-card-title>
+        <mat-card-subtitle>{{account.bankName}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="balance">
+            {{account.currentBalance | currency}}
+        </div>
+
+        <div class="account-details">
+            <p><strong>Account Type:</strong> {{AccountType[account.accountType]}}</p>
+            <p><strong>Account Number:</strong> {{account.accountNumber}}</p>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button mat-button color="primary" (click)="onEdit()">
+            <mat-icon>edit</mat-icon> Edit
+        </button>
+        <button mat-button color="warn" (click)="onDelete()">
+            <mat-icon>delete</mat-icon> Delete
+        </button>
+    </mat-card-actions>
+</mat-card>

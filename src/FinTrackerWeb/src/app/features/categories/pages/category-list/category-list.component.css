@@ -1,0 +1,48 @@
+/* src/app/features/categories/pages/category-list/category-list.component.css (Replace entire file) */
+.categories-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.filter-card {
+    margin-bottom: 24px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 48px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+    .categories-container {
+        padding: 16px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+}
